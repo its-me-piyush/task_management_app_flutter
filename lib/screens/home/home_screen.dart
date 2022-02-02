@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'components/go_premium.dart';
+import 'components/tasks_list.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -9,8 +12,24 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: _customAppBar(),
-      body: Center(
-        child: Text('Home'),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const GoPremiumWidget(),
+          Container(
+            padding: const EdgeInsets.all(15),
+            child: const Text(
+              'Tasks',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          const Expanded(
+            child: TasksList(),
+          ),
+        ],
       ),
     );
   }

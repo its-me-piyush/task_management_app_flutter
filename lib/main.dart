@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:task_management_app_flutter/provider/tasks_provider.dart';
 import 'package:task_management_app_flutter/screens/home/home_screen.dart';
 
 void main() => runApp(const MyApp());
@@ -8,9 +10,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Task App',
-      home: HomeScreen(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider.value(
+          value: TasksProvider(),
+        ),
+      ],
+      child: const MaterialApp(
+        title: 'Task App',
+        home: HomeScreen(),
+      ),
     );
   }
 }
