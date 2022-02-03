@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:task_management_app_flutter/models/tasks_model.dart';
 import 'package:task_management_app_flutter/provider/tasks_provider.dart';
+import 'package:task_management_app_flutter/screens/details/details.dart';
 
 class TasksList extends StatelessWidget {
   const TasksList({
@@ -49,46 +50,55 @@ class TasksList extends StatelessWidget {
         ));
   }
 
-  Container _customTaskDisplay(TaskModel currentTask, BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(15),
-      decoration: BoxDecoration(
-        color: currentTask.backgroundColor,
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Icon(
-            currentTask.iconData,
-            color: currentTask.iconColor,
-            size: 35,
+  Widget _customTaskDisplay(TaskModel currentTask, BuildContext context) {
+    return InkWell(
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => DetailScreen(taskModel: currentTask),
           ),
-          const SizedBox(
-            height: 30,
-          ),
-          Text(
-            currentTask.title!,
-            style: const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
+        );
+      },
+      child: Container(
+        padding: const EdgeInsets.all(15),
+        decoration: BoxDecoration(
+          color: currentTask.backgroundColor,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Icon(
+              currentTask.iconData,
+              color: currentTask.iconColor,
+              size: 35,
             ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Row(
-            children: [
-              _customTasksStatus(currentTask.buttonColor!,
-                  '${currentTask.left} left', currentTask.iconColor!),
-              const SizedBox(
-                width: 5,
+            const SizedBox(
+              height: 30,
+            ),
+            Text(
+              currentTask.title!,
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
               ),
-              _customTasksStatus(Colors.white, '${currentTask.done} done',
-                  currentTask.iconColor!),
-            ],
-          ),
-        ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                _customTasksStatus(currentTask.buttonColor!,
+                    '${currentTask.left} left', currentTask.iconColor!),
+                const SizedBox(
+                  width: 5,
+                ),
+                _customTasksStatus(Colors.white, '${currentTask.done} done',
+                    currentTask.iconColor!),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
