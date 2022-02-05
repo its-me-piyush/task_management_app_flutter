@@ -33,6 +33,7 @@ dependencies:
     sdk: flutter
   flutter_svg: ^1.0.3
   provider: ^6.0.2
+  timeline_tile: ^2.0.0
 
 dev_dependencies:
   flutter_lints: ^1.0.0

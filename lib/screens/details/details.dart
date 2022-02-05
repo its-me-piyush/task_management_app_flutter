@@ -44,7 +44,7 @@ class DetailScreen extends StatelessWidget {
                         'No Tasks Today',
                         style: TextStyle(
                           color: Colors.grey,
-                          fontSize: 10,
+                          fontSize: 18,
                         ),
                       ))),
                 )
