@@ -1,12 +1,44 @@
-# task_management_app_flutter
+<p align="center">
+  <a href="https://flutter.io/">
+    <img src="https://diegolaballos.com/files/images/flutter-icon.jpg" alt="Logo" width=72 height=72>
+  </a>
 
-### First Screen:
+  <h3 align="center">Task Management App UI</h3>
 
-![Task Management App Flutter (First Screen)](https://user-images.githubusercontent.com/85029306/152213887-f864dd5d-2def-4d7b-8e04-23a7f03331c2.png)
+  <p align="center">
+    A simple Task Management App UI with Flutter,
+    <br>
+    Made with :heart: 
+    <br>
+    <br>
+    <a href="https://github.com/zsiecr/task_management_app_flutter/issues/new">Report bug</a>
+    ·
+    <a href="https://github.com/zsiecr/task_management_app_flutter/issues/new">Request feature</a>
+  </p>
+</p>
 
 
-### Current Progress:
 
-![Task Management App Flutter (Current Progress)](https://user-images.githubusercontent.com/85029306/152396397-a96f9472-00cb-46b3-b664-070ba47cac78.png)
+## Table of contents
 
-Design From: <a href="https://github.com/zsiecr/Simple-CountDown-Timer-Flutter/issues/new">Dribble</a>
+- [Quick start](#quick-start)
+- [Contributing](#contributing)
+- [Thanks](#thanks)
+
+
+## Quick start
+
+This is a normal flutter app. You should follow the instructions in the [official documentation](https://flutter.io/docs/get-started/install).
+
+## Contributing
+
+Have a bug or a feature request? Please follow through a general contributing guidline and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/zsiecr/task_management_app_flutter/issues/new).
+
+Maintained by [Piyush Nagpal](https://github.com/zsiecr).
+
+
+## Thanks
+
+Thanks to all contributors and their support:
+
+Enjoy :metal:
